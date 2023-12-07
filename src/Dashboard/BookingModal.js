@@ -3,9 +3,18 @@ import "./BookingModal.css";
 import { useNavigate } from "react-router-dom";
 
 const BookingModal = () => {
+  const storedSeats = localStorage.getItem("selectedSeats");
+  let initialValue;
+  if (storedSeats === null) {
+    initialValue = [];
+  } else {
+    initialValue = JSON.parse(storedSeats);
+  }
+  console.log(storedSeats)
+
   const navigate = useNavigate();
   const [selectedMovie, setSelectedMovie] = useState(null);
-  const [selectedSeats, setSelectedSeats] = useState(null);
+  const [selectedSeats, setSelectedSeats] = useState(initialValue);
   const [selectedTheatre, setSelectedTheatre] = useState(null)
   const [selectedScreen, setSelectedScreen] = useState(null);
   const [user, setUser] = useState(null);
@@ -48,13 +57,17 @@ const BookingModal = () => {
     return () => clearTimeout(timeoutId);
   }, [navigate]);
 
+  const Seats = JSON.parse(localStorage.getItem('selectedSeats'))
+  console.log(Seats)
   const movieName = selectedMovie ? JSON.parse(selectedMovie).title : "";
   const theatre = selectedTheatre ? JSON.parse(selectedTheatre).name : ""
   const screenTime = selectedScreen ? JSON.parse(selectedScreen).time : "";
-  const price = selectedMovie ? JSON.parse(selectedMovie).price : "";
-  const seats = selectedSeats ? JSON.parse(selectedSeats).length : "";
+  const price = selectedSeats ? Seats.map((seat) => seat.price * seat.percentage) : ""
+  console.log(price)
+  // console.log(typeof price)
+  const seats = selectedSeats ? JSON.parse(localStorage.getItem('selectedSeats')).length : "";
   const numbers = selectedSeats
-    ? JSON.parse(selectedSeats)
+    ? JSON.parse(localStorage.getItem('selectedSeats'))
         .map((seat) => seat.name)
         .join(", ")
     : "";
@@ -71,7 +84,7 @@ const BookingModal = () => {
       <p>Theatre: {theatre}</p>
       </div>
       <div className="modal__seats">
-        <p>Price: {seats * price}</p>
+        <p>Price: {price.reduce((acc, currPrice) => (parseInt(acc) + parseInt(currPrice)), 0)}</p>
         <p>Seats No: {numbers}</p>
       </div>
       <div>
