@@ -11,7 +11,6 @@ const TheatreList = () => {
         const storedMovie = localStorage.getItem('selectedMovie')
         const storedScreen = localStorage.getItem('selectedScreen')
         const storedTheatre = localStorage.getItem('selectedTheatre')
-        console.log(selectedTheatre)
         if(storedMovie){
             setSelectedMovie(JSON.parse(storedMovie))
         }
@@ -22,6 +21,8 @@ const TheatreList = () => {
             setSelectedTheatre(JSON.parse(storedTheatre))
         }
     }, [])
+
+    console.log(selectedTheatre)
 
     const handleScreenSelect = (theatre, screen) => {
         if(screen?.id === selectedScreens?.id){
