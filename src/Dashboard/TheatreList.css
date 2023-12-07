@@ -1,0 +1,68 @@
+.theatres {
+    display: flex;
+    background: url("https://img.freepik.com/premium-vector/abstract-smooth-blur-purple-gradient-background-website-banner-paper-card-decorative-design_120819-485.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.theatres__sidebar {
+    flex: 0.2;
+}
+
+.theatres__page {
+    flex: 0.8;
+    height: 100vh;
+    border-left: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.theatres__details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 100px;
+    align-items: center;
+}
+
+.theatres__details--btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.theatres__details--btns > button {
+    max-width: 150px;
+    height: 40px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.theatres__details--btns > button:hover {
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+    background-position: right center;
+}
+
+
+.btns.active {
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 150% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+@media screen and (min-width: 767px) {
+    .theatres__details {
+        font-size: 14px;
+    }
+
+
+
+}

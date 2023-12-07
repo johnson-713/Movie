@@ -1,0 +1,85 @@
+.signUpScreen {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url("https://img.freepik.com/premium-vector/abstract-smooth-blur-purple-gradient-background-website-banner-paper-card-decorative-design_120819-485.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.signUpScreen__signUp {
+    margin: 0 auto;
+    width: 50%;
+    height: 100vh;
+    max-height: 500px;
+    max-width: 480px;
+    display: flex;
+    color: #ff0000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.signUpScreen__signUp > form > h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.signUpScreen__signUp > form > p {
+    text-align: center;
+    color: #ff0000;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.signUpScreen__signUp > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.signUpScreen__signUp > form > input {
+    padding: 5px;
+    outline-width: 0;
+    height: 30px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    width: 300px;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signUpScreen__signUp > form > button {
+    color: #FFF;
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    height: 48px;
+    border-radius: 19px;
+    border: none;
+    cursor: pointer;
+    width: 250px;
+    margin: 10px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signUpScreen__signUp > form > button:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+    .signUpScreen__signUp > form > input,
+    .signUpScreen__signUp > form > button {
+        width: 90%;
+    }
+}

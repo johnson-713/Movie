@@ -1,0 +1,52 @@
+.movieCard {
+    display: flex;
+    max-width: 440px;
+    cursor: pointer;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.movieCard > img {
+    object-fit: cover;
+    max-width: 250px;
+    max-height: 300px;
+    cursor: pointer;
+    width: 15rem;
+    border-radius: 15px;
+}
+
+.movieCard > img:hover {
+    transform: scale(0.9);
+}
+
+.movieCard__text {
+    text-align: left;
+}
+
+.movieCard__text > h3 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.movieCard__text > p {
+    margin-bottom: 10px;
+}
+
+#lang,
+#price {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .movieCard {
+        max-width: 100%;
+    }
+
+    .movieCard > img {
+        max-height: 300px;
+    }
+
+    .movieCard__text >h3 {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,90 @@
+.seatsPage {
+    display: flex;
+    background: url("https://img.freepik.com/premium-vector/abstract-smooth-blur-purple-gradient-background-website-banner-paper-card-decorative-design_120819-485.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.seatsPage__sidebar {
+    flex: 0.2;
+}
+
+.seatsPage__main {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border-left: 2px solid #fff;
+}
+
+.seatsPage__seatGrid > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.seat {
+    width: 70px;
+    height: 70px;
+    gap: 20px;
+    background-color: lightgray;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+}
+
+.seat:hover {
+    background-position: right center; 
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+    text-decoration: none;
+}
+
+.seat.selected {
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+
+.booking__summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.booking__summary > button {
+    cursor: pointer;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.booking__summary > button:hover {
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+}
+
+.selected__screen {
+    display: flex;
+    color: #fff;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.selected__seats {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    gap: 20px;
+}
+

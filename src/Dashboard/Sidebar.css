@@ -1,0 +1,74 @@
+.sidebar {
+    flex: 0.2;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-width: 250px;
+}
+
+#title {
+    margin-right: 80px;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.sidebar > button {
+    height: 25px;
+    padding: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    width: 80%;
+    cursor: pointer;
+}
+
+.sidebar > button:hover {
+    background-position: right center; 
+    background-image: linear-gradient(to right, #403B4A 0%, #E7E9BB  51%, #403B4A  100%);
+    text-decoration: none;
+}
+
+.sidebar > button.active {
+    background-image: linear-gradient(to right, #403B4A 0%, #E7E9BB  51%, #403B4A  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+    .sidebar {
+        margin-top: 170px;
+    }
+
+    #title {
+        margin-right: 0;
+        font-size: 10px;
+    }
+
+    .sidebar > button {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 451px) and (max-width: 800px) {
+    .sidebar {
+        margin-top: 170px;
+    }
+
+    #title {
+        margin-right: 0;
+        font-size: 14px;
+    }
+
+    .sidebar > button {
+        width: 90%;
+    }
+}

@@ -1,0 +1,122 @@
+.movieList {
+  background: url("https://img.freepik.com/premium-vector/abstract-smooth-blur-purple-gradient-background-website-banner-paper-card-decorative-design_120819-485.jpg")
+    center no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.movieList__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+}
+
+.movieList__nav--search {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  height: 27px;
+}
+
+.movieList__nav--search > input {
+  height: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  border: none;
+}
+
+.movieList__nav--btns {
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+.movieList__nav > button {
+  width: 100px;
+  height: 42px;
+  background-color: #fff;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+}
+
+.movieList__nav > button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+#tag {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#desc {
+  font-size: 12px;
+}
+
+.movieList__selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .movieList__nav--btns {
+    margin-top: 60px;
+  }
+
+  .movieList__nav > button {
+    width: 80px;
+    height: 36px;
+  }
+
+  #tag,
+  #desc {
+    font-size: 10px;
+  }
+
+  .movieList__selection {
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .movieList__nav--btns {
+    margin-top: 50px;
+  }
+
+  .movieList__nav > button {
+    width: 50px;
+    height: 36px;
+  }
+
+  #tag,
+  #desc {
+    font-size: 6px;
+  }
+
+  .movieList__selection {
+    gap: 10px;
+  }
+  .movieList__nav--search > input {
+    margin: 20px 20px;
+  }
+
+  .movieList__nav {
+    padding: 10px 20px;
+  }
+}

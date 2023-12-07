@@ -1,0 +1,38 @@
+.account {
+    flex: 0.8;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-left: 2px solid #fff;
+}
+
+.account > button {
+    background-color: red;
+    color: #FFF;
+    border: none;
+    width: 288px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #f85032 0%, #e73827  51%, #f85032  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.account > button:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
+
+ 
